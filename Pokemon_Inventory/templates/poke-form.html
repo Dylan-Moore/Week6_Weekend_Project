@@ -1,0 +1,11 @@
+<form method = "POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        <fieldset id="poke-field">
+            {{ form.pokemon_name.label }}
+            {{ form.pokemon_name(class = "form-control", placeholder = "Enter name here.... or type random") }}
+        </fieldset>
+        {{ form.submit_button(class = "btn btn-primary btn-block") }}
+    </div>
+</form>
+

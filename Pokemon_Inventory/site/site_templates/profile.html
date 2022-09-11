@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="container">
+    <div class="row">
+        <aside class="col-12">
+            <h2>Search for a Pokemon!</h2>
+            {% include 'poke-form.html' %}
+        </aside>
+    </div>
+</main>
+
+
+
+<div class="container" id="profile-detail">
+    <h3 class="col-5">Welcome {{ current_user.username }} Here are your profile details!</h3>
+    <ul class="list-group col-5">
+        <li class="list-group-item">username: {{ current_user.username }}</li>
+        <li class="list-group-item">Email: {{ current_user.email }}</li>
+        <li class="list-group-item">Token: {{ current_user.token }}</li>
+        <li class="list-group-item">Profile Created: {{ current_user.date_created }}</li>
+    </ul>
+    <div class="col-5">
+        <form method = "GET" action="">
+        <h3>Your team!</h3>
+        <li class="list-group-item">Pokemon: {{ current_user.pokemon }}</li>
+        </form>    
+    </div>
+</div>
+
+
+{% endblock content %}
