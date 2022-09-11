@@ -43,12 +43,11 @@ def profile():
                 moveset = ", ".join([data['moves'][i]['move']['name'].title() for i in range(len(data['moves']))])
                 poke = Pokemon(name=name, game_id = game_id, type = type, height=height, weight=weight, moveset=moveset, user_token=current_user.token)                
                 db.session.add(poke)
-                db.session.commit()
+                db.session.commit()               
                 redirect(url_for('site.profile'))
     except:
         raise Exception('Invalid Form Data: Please Check Your Form')
     return render_template("profile.html", form=form)
-
 
 
 

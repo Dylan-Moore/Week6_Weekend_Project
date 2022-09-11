@@ -22,10 +22,10 @@
         <li class="list-group-item">Profile Created: {{ current_user.date_created }}</li>
     </ul>
     <div class="col-5">
-        <form method = "GET" action="">
         <h3>Your team!</h3>
-        <li class="list-group-item">Pokemon: {{ current_user.pokemon }}</li>
-        </form>    
+        {% for pokemon in current_user.pokemon %}
+        <li class="list-group-item">Pokemon: {{ pokemon }} <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon.game_id }}.png" alt="#"> </li>   
+        {% endfor %}
     </div>
 </div>
 

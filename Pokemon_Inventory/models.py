@@ -85,7 +85,8 @@ class Pokemon(db.Model):
         self.user_token = user_token
     def __repr__(self):
             #return f"The following Pokemon has been added: {self.name} {self.type}"
-            return f"[{self.name}, {self.type}, {self.game_id}]"
+            #return f"[{self.name}, {self.type}, {self.game_id}]"
+            return f"{self.name}, {self.type}, {self.game_id}"
         
 
     def set_id(self):

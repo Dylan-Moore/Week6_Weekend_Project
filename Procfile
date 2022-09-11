@@ -1,1 +1,1 @@
-web: gunicorn Pokemon_Inventory:app --preload
+web: gunicorn Pokemon_Inventory:app --preloadb 
